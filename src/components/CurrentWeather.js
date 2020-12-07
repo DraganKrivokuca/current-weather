@@ -37,7 +37,6 @@ function CurrentWeather({ currentCity, currentWeather }) {
     }, [currentWeather, currentCity, API.url, API.key]);
 
     if (weather) {
-        console.log('weather', weather);
         const renderForecastItems = weather.forecast.forecastday.map((days) => {
             return <Forecast
                 key={days.date_epoch}
