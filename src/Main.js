@@ -17,12 +17,8 @@ class Main extends React.Component {
 
   renderMain() {
     if (this.state.errorMsg && !this.state.cords) {
-      return <div>
-        Error: {this.state.errorMsg}
-        <h4><Spinner message='Please accept location request' /></h4>
-      </div>
+      alert('Please accept location request');
     }
-
     if (!this.state.errorMsg && this.state.cords) {
       return <div></div>
     }
