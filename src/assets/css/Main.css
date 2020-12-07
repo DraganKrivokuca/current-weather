@@ -1,0 +1,152 @@
+main {
+  min-height: 100vh;
+  padding: 20px 0 0 0;
+}
+
+.Main {
+  /* background-color: #30B197;
+  background-repeat: no-repeat;
+  transition: 0.2s ease; */
+  text-align: center;
+  vertical-align: middle;
+}
+
+.Main.autumn {
+  background-image: linear-gradient(to bottom,
+      rgba(0, 255, 213, 0.52),
+      rgba(0, 0, 0, 0.73)),
+    url("../images/autumn.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.2s ease;
+}
+
+.Main.winter {
+  background-image: linear-gradient(to bottom,
+      rgba(0, 255, 213, 0.52),
+      rgba(0, 0, 0, 0.73)),
+    url("../images/winter.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.2s ease;
+}
+
+.Main.spring {
+  background-image: linear-gradient(to bottom,
+      rgba(255, 16, 16, 0.52),
+      rgba(0, 0, 0, 0.73)),
+    url("../images/spring.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.2s ease;
+}
+
+.Main.summer {
+  background-image: linear-gradient(to bottom,
+      rgba(255, 16, 16, 0.52),
+      rgba(0, 0, 0, 0.73)),
+    url("../images/summer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.2s ease;
+}
+
+.location-container .location {
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 3px 3px rgba(58, 53, 53, 0.73);
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-top: 20px;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.location-container .date {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 3px 3px rgba(58, 53, 53, 0.73);
+}
+
+.weather-container {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.weather-container .temperature {
+  color: white;
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  padding: 15px 25px;
+  font-size: 100px;
+  font-weight: 700;
+  background-color: rgb(255, 255, 255, 0.1);
+  border-radius: 16px;
+  text-shadow: 3px 3px rgba(58, 53, 53, 0.73);
+}
+
+.weather-container .weather {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  text-shadow: 3px 3px rgba(58, 53, 53, 0.73);
+}
+
+.weather-container .weather-more {
+  display: inline-flex;
+  color: white;
+  font-weight: 500;
+  padding-top: 50px;
+}
+
+.weather-container .weather-more .more-item {
+  text-shadow: 3px 3px rgba(58, 53, 53, 0.73);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.weather-container .weather-more .more-item .value {
+  font-size: 18px;
+}
+
+label {
+  color: white;
+  margin: 5px;
+  font-size: 15px;
+  font-family: fantasy;
+}
+
+.forecast {
+  display: inline-flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  max-width: 400px;
+  vertical-align: middle;
+  align-items: baseline;
+}
+
+.forecast-container{
+  color: white;
+  font-size: 12px;
+}
+
+.forecast-container .date{
+  display: inline-flex;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.forecast-container .temperature{
+  display: inline-flex;
+  color: white;
+}
+
+.forecast-container .more {
+  text-shadow: 3px 3px rgba(58, 53, 53, 0.73);
+  color: white;
+}
