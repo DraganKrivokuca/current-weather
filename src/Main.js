@@ -1,12 +1,12 @@
 import './assets/css/Main.css';
 import React from 'react';
-import CurrentLocation from './components/CurrentLocation';
 import CurrentWeather from './components/CurrentWeather';
+import Location from './components/Location';
 import Spinner from './components/Spinner';
 
 class Main extends React.Component {
 
-  state = { cords: null, errorMsg: null, weather: null, city: null};
+  state = { cords: null, errorMsg: null, weather: null, city: 'Cacak' };
 
   componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
@@ -16,21 +16,21 @@ class Main extends React.Component {
   }
 
   renderMain() {
-    if (this.state.errorMsg && !this.state.cords) {
+    if (this.state.errorMsg && !this.state.city) {
       alert('Please accept location request');
     }
-    if (!this.state.errorMsg && this.state.cords) {
+    if (!this.state.errorMsg && this.state.city) {
       return <div></div>
     }
     return <div><Spinner message='Loading ...' /></div>
   }
 
   setCity = (city) => {
-    this.setState({ city: city});
+    this.setState({ city: city });
   }
 
   setWeather = (weather) => {
-    this.setState({ weather: weather});
+    this.setState({ weather: weather });
   }
 
   getSeason = function (month) {
@@ -53,10 +53,9 @@ class Main extends React.Component {
     return (
       <div>
         {this.renderMain()}
-        <div
-          className={`Main ${season}`}>
+        <div className={`Main ${season}`}>
           <main>
-            <CurrentLocation location={this.state.cords} city={this.setCity} />
+            <Location setCity={this.setCity} currentCity={this.state.city} background={season} />
             <CurrentWeather currentCity={this.state.city} currentWeather={this.setWeather} />
           </main>
         </div>

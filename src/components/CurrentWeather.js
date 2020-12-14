@@ -7,12 +7,12 @@ import Forecast from './Forecast';
 
 function CurrentWeather({ currentCity, currentWeather }) {
 
-    const [weather, setWeather] = useState(null);
-
     const API = {
         url: api.API_URL,
         key: api.API_KEY
     }
+    const [weather, setWeather] = useState(null);
+    const [statusCode, setStatusCode] = useState(200);
 
     useEffect(() => {
         if (currentCity) {
@@ -25,8 +25,10 @@ function CurrentWeather({ currentCity, currentWeather }) {
                             key: API.key,
                             days: 7
                         }
-                    },
-                    (err) => { console.log('err', err) });
+                    })
+                    .catch((err) => {
+                        setStatusCode(404);
+                    })
                 setWeather(data);
                 currentWeather(data.current.temp_c);
             };
@@ -35,8 +37,10 @@ function CurrentWeather({ currentCity, currentWeather }) {
             return <div><Spinner /></div>
         }
     }, [currentWeather, currentCity, API.url, API.key]);
-
-    if (weather) {
+    if (weather === null) {
+        return <div><Spinner message="Loading ..." /></div>
+    };
+    if (statusCode === 200) {
         const renderForecastItems = weather.forecast.forecastday.map((days) => {
             return <Forecast
                 key={days.date_epoch}
@@ -45,7 +49,7 @@ function CurrentWeather({ currentCity, currentWeather }) {
                 maxTemp={days.day.maxtemp_c}
                 condition={days.day.condition.text}
                 icon={days.day.condition.icon}
-                />
+            />
         })
         return (
             <div>
@@ -80,16 +84,16 @@ function CurrentWeather({ currentCity, currentWeather }) {
                 <br />
                 <br />
                 <br />
-                <hr />
+                <div className="section-separator">3-day forecast</div>
                 <div className="forecast">
                     {renderForecastItems}
                 </div>
-                <hr />
             </div>
         );
     } else {
-        return <div><Spinner /></div>
-    }
+        window.location.reload();
+        return <div><Spinner message="City not found! Please insert a valid name." /></div>
+    };
 }
 
 export default CurrentWeather;
