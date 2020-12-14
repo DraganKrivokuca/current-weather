@@ -41,9 +41,9 @@ function Location({ setCity, currentCity, background }) {
             </div>
             <div className={showHideClassName}>
                 <section className={`modal-main ${background}`}>
-                    <div style={{top: '35%'}} className="ui form">
+                    <div style={{top: '40%'}} className="ui form">
                         <div className="field">
-                            <input style={{ width: '70%', background: 'unset', borderColor: '#fff', color: '#fff' }}
+                            <input style={{ width: '80%', background: 'unset', borderColor: '#fff', color: '#fff' }}
                                 onChange={(e) => changeTerm(e)} type="text" value={term} placeholder='Enter City Name' />
                         </div>
                         {/* <button className="ui button" onClick={search}>

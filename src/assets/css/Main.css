@@ -185,65 +185,45 @@ label {
 }
 
 .modal-main.autumn {
-  background-image: linear-gradient(to bottom,
-      rgba(0, 255, 213, 0.52),
-      rgba(0, 0, 0, 0.73)),
-    url("../images/autumn.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #67BBAA;
   transition: 0.2s ease;
   position:fixed;
   width: 70%;
-  height: 40%;
-  top: 30%;
+  height: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
 
 .modal-main.winter {
-  background-image: linear-gradient(to bottom,
-  rgba(0, 255, 213, 0.52),
-  rgba(0, 0, 0, 0.73)),
-  url("../images/winter.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #67BBAA;
   transition: 0.2s ease;
   position:fixed;
   width: 70%;
-  height: 40%;
-  top: 30%;
+  height: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
 
 .modal-main.spring {
-  background-image: linear-gradient(to bottom,
-  rgba(255, 16, 16, 0.52),
-  rgba(0, 0, 0, 0.73)),
-  url("../images/spring.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #ff9a9a;
   transition: 0.2s ease;
   position:fixed;
   width: 70%;
-  height: 40%;
-  top: 30%;
+  height: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
 
 .modal-main.summer {
-  background-image: linear-gradient(to bottom,
-  rgba(255, 16, 16, 0.52),
-  rgba(0, 0, 0, 0.73)),
-  url("../images/summer.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #ff9a9a;
   transition: 0.2s ease;
   position:fixed;
   width: 70%;
-  height: 40%;
-  top: 30%;
+  height: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
