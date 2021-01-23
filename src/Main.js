@@ -34,16 +34,16 @@ class Main extends React.Component {
   }
 
   getSeason = function (month) {
-    if (month >= 11) {
+    if (month >= 11 || month <= 1) {
       return 'winter';
     }
-    if (month >= 2 && month <= 4) {
+    if (month >= 2 || month <= 4) {
       return 'spring';
     }
-    if (month >= 5 && month <= 7) {
+    if (month >= 5 || month <= 7) {
       return 'summer';
     }
-    if (month >= 8 && month <= 10) {
+    if (month >= 8 || month <= 10) {
       return 'autumn';
     }
   }
