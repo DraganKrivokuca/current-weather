@@ -7,6 +7,7 @@ const Forecast = ({ date, minTemp, maxTemp, condition, icon }) => {
     
     return (
         <div className="ui grid container">
+            GAG TEST
             <div className="column">
                 <div className="forecast-container">
                     <div className="date">
